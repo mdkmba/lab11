@@ -11,8 +11,8 @@ public class UsedCar extends Car {
     private double mileageM;
 
 
-    public UsedCar(String make, String model, int year, double price, double mileage) {
-        super (make, model, year, price);
+    public UsedCar(String makeM, String model, int year, double price, double mileage) {
+        super (makeM, model, year, price);
         mileageM = mileage;
     }
 
@@ -28,7 +28,7 @@ public class UsedCar extends Car {
 
         String result = "";
 
-        System.out.printf("%-12s%-12s%-12d$%,-17.2f%,-18.1f", super.toString(), mileageM);
+        System.out.printf("%-12s%-12s%-12d$%,-17.2f%,-18.1f", makeM, modelM, yearM, priceM, mileageM);
 
         return result;
     }

@@ -4,10 +4,10 @@
     public class Car {
 
 
-        private String makeM;
-        private String modelM;
-        private int  yearM;
-        private double priceM;
+        protected String makeM;
+        protected String modelM;
+        protected int  yearM;
+        protected double priceM;
 
         public Car() {
             makeM = "";
@@ -64,6 +64,10 @@
 //        System.out.printf("\n\n\n%-12s%-12s%-12s%-12s\n", "Make", "Model", "Year", "Price(USD)", Mileage (if used));
             System.out.printf("%-12s%-12s%-12d$%,-18.2f", makeM, modelM, yearM, priceM);
             return result;
+        }
+
+        public void print() {
+
         }
     }
 
