@@ -7,6 +7,7 @@ public class CarLotApp {
 
     public static void main(String[] args) {
         Scanner scnr = new Scanner(System.in);
+        int selection = 0;
 
         ArrayList<Car> carArrayList;
         carArrayList = new ArrayList<>();
@@ -22,23 +23,44 @@ public class CarLotApp {
 
 
 
-        System.out.print("\n\n\nWelcome to HONEST NEWBIE'S New & Used Cars!");
+        System.out.print("\n\n\nWelcome to King Cisero New & Used Cars!");
 
+
+        do{
         System.out.println("\nCurrent Inventory:");
         System.out.printf("\n%-2s %-12s%-12s%-12s%-18s%-18s\n", "#", "Make", "Model", "Year", "Price", "Mileage(Used Cars)");
         System.out.printf("%-2s %-12s%-12s%-12s%-18s%-18s\n", "==", "==========", "==========", "==========", "==============", "==================");
 
         CarLot carList = new CarLot(carArrayList);
             carList.listall();
-//            carList.addCar();
-//            carList.deleteCar();
-//            carList.infoCar();
-//            carList.carSwap();
+            carList.addCar();
+            carList.deleteCar();
+            carList.infoCar();
+            carList.carSwap();
+
+            public void infoCar() {
+            System.out.print("\nWhich car would you like:  ");
+            selection = (scnr.nextInt() - 1);
+
+        }
+        public void addcar() {
+            for (int i = 0; i < n; i++) {
+                carList.add(new Car());
+                System.out.print("\nEnter Make: ");
+                carArrayList.get(i).setMakeM(scnr.nextLine());
+                System.out.print("\nEnter Model: ");
+                carArrayList.get(i).setModelM(scnr.nextLine());
+                System.out.print("\nEnter Year: ");
+                carArrayList.get(i).setYearM(scnr.nextInt());
+                System.out.print("\nEnter Price: ");
+                carArrayList.get(i).setPriceM(scnr.nextDouble());
+                scnr.nextLine();
+            }
+
+        }
+            }
 
 
-//        System.out.print("\nWhich car would you like:  ");
-//        int selection = (scnr.nextInt());
-//        selection = selection -1;
 
 
         }
@@ -46,4 +68,5 @@ public class CarLotApp {
 
 
     }
+
 

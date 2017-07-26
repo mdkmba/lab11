@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class CarLot {
-
+    int selection;
     private ArrayList<Car> carArrayListM;
 
     public CarLot(ArrayList<Car> carArrayList) {
@@ -9,7 +9,7 @@ public class CarLot {
     }
 
 
-    public void listall() { //
+    public void listall() {
 
         for (int i = 0; i < carArrayListM.size(); i++) {
             System.out.print((i + 1) + ". ");
@@ -17,29 +17,25 @@ public class CarLot {
         }
     }
 
-    public void addCar() { //
+    public void addCar(Car addCar) {
 
         carArrayListM.add(addCar);
-}
-    public void deleteCar(int selection) {
+    }
+
+    public void deleteCar(selection) {
 
         carArrayListM.remove(selection);
     }
 
-    public void infoCar() { //
+    public void infoCar() {
 
-        for (int i = 0; i < carArrayListM.size(); i++) {
-            System.out.print(i + ". ");
-            System.out.print(carArrayListM.get(i));
-        }
+        System.out.print(carArrayListM.get(selection));
     }
 
-    public void carSwap() { //
+    public void carSwap() {
 
-        for (int i = 0; i < carArrayListM.size(); i++) {
-            System.out.print(i + ". ");
-            System.out.print(carArrayListM.get(i));
-        }
+        carArrayListM.remove(selection);
+        carArrayListM.add(selection, swap);
     }
 
 }
